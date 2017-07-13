@@ -1,0 +1,2 @@
+获取tcp 长度大于0的数据包(去掉超时重传的包)
+tcp.len >0 and !(tcp.analysis.retransmission)

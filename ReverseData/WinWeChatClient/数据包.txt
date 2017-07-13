@@ -1,0 +1,60 @@
+SrsMarsPktHdr() {
+		totalPktLength = 0;//整个数据包的长度
+		clientVersion = 0;
+		cmdId = -1;
+		seq = -1;// seq = -1 用在握手阶段
+   // 0 服务器push到client的包
+	}
+
+
+目的ip                数据
+163.177.81.146          00000010 0010 0001 0000 0006 ffffffff
+175.16.5.40             00000010 0010 0001 3b9a ca06 ffffffff
+163.177.81.146          00000010 0010 0001 0000 0006 ffffffff
+175.16.5.40             00000010 0010 0001 3b9a ca06 ffffffff
+
+163.177.81.146  (Len= 562)  00000232 0010 0001 0000 00f7 00000001// 验证登录二维码包
+175.16.5.40 (Len= 111)      0000006f 0010 0001 3b9a caf7 00000001
+CPU Disasm
+地址        十六进制数据            指令                                                                                     注释
+633AE200   .  68 68757F63   PUSH 637F7568                                                                          ; |Arg4 = ASCII "void __thiscall mars::stn::LongLink::__RunReadWrite(unsigned int,enum mars::stn::ErrCmdType &,int &,struct mars::stn::ConnectProfile &)"
+
+ 
+/cgi-bin/micromsg-bin/getloginqrcode 
+
+"taskid:2, cgi:/cgi-bin/micromsg-bin/getloginqrcode, @0x7B2B628"
+
+CPU Stack
+地址        数值         注释
+0E0EFC04  |0D810378  ; ASCII "szshort.weixin.qq.com"
+CPU Disasm
+地址        十六进制数据            指令                                       注释
+632F1805  |.  E8 660A0000   CALL 632F2270                            ; \WeChatWin.632F2270
+
+
+CPU Stack
+地址        数值         注释
+0E0EFAB8  |55098348  ; ASCII "..\src\shortlink.cc"
+0E0EFABC  |5509826C  ; ASCII "void __thiscall mars::stn::ShortLink::__Run(void)"
+
+CPU Stack
+地址        数值         注释
+0E0EFA8C  |0E0EFB88  ; ASCII "no_ssid_wifi"
+
+CPU Stack
+地址        数值         注释
+0E0EF9EC  |0D805258  ; ASCII "163.177.81.144"
+0E0EF9F0  |55074E00  ; ASCII "\Mars\mars\mars/stn/src/special_ini.h"
+CPU Stack
+地址        数值         注释
+0E0EF4B0  |55098348  ; ASCII "..\src\shortlink.cc"
+0E0EF4B4  |550986D8  ; ASCII "void __thiscall mars::stn::ShortLink::__RunReadWrite(unsigned int,int &,int &,struct mars::stn::ConnectProfile &)"
+
+CPU Dump
+地址        十六进制数据                                           多字节 (ANSI/OEM - 简>
+02ACE030  2F 63 67 69|2D 62 69 6E|2F 6D 69 63|72 6F 6D 73| /cgi-bin/microms
+02ACE040  67 2D 62 69|6E 2F 63 68|65 63 6B 6C|6F 67 69 6E| g-bin/checklogin
+02ACE050  71 72 63 6F|64 65 00 BA|0D F0 AD BA|0D F0 AD     qrcode .
+瓠.
+瓠
+
