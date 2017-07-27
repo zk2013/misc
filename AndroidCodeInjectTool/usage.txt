@@ -1,0 +1,1 @@
+/data/local/tmp/injector  /system/bin/mediaserver  /data/local/tmp/libaudiocapture.so init  -s /data/local/tmp/haudio/
