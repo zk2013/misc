@@ -1,0 +1,2 @@
+libfungo_player.so
+int       ffp_prepare_async_l(FFPlayer *ffp, const char *file_name);
